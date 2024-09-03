@@ -7,7 +7,15 @@ import Timer from "../Timer/Timer";
 const Home = () => {
   return (
     <div className="home-container">
-      {/* <Timer/> */}
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
+        <Timer />
+      </div>
       <Card />
     </div>
   );

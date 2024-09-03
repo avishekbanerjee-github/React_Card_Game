@@ -24,5 +24,6 @@
 }
 
 .matched {
-  background-color: rgb(19, 167, 64) !important;  /* Set matched cards to have a red background */
+  background-color: rgb(19, 167, 64) !important; 
+  opacity: 0.3;
 }

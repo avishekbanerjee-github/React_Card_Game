@@ -1,6 +1,7 @@
 import logo from "./logo.svg";
 import "./App.css";
 import { useNavigate } from "react-router-dom";
+import { useLocation } from 'react-router-dom';
 
 function App() {
   const navigate = useNavigate();
@@ -8,7 +9,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <h3>Start Your Card Game</h3>
-        <button type="button" class="btn btn-danger" onClick={()=>navigate('/home')}>
+        <button type="button" className="btn btn-danger" onClick={()=>navigate('/home')}>
           Start Game
         </button>
       </header>

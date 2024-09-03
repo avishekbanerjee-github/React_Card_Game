@@ -1,11 +1,14 @@
 import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const Timer = () => {
-  const [timer, setTimer] = useState(30);
+  const [timer, setTimer] = useState(120);
+  const navigate = useNavigate();
 
   useEffect(() => {
     if (timer <= 0) {
-      alert("Time's Up");
+      alert("Time Up");
+      navigate('/')
       return;
     }
     const countTime = setInterval(() => {
@@ -19,7 +22,18 @@ const Timer = () => {
     const remainingSeconds = seconds % 60;
     return `${minutes}:${remainingSeconds < 10 ? "0" : ""}${remainingSeconds}`;
   };
-  return <h1>Timer: {formatTime(timer)}</h1>;
+  return (
+    <div
+      style={{
+        backgroundColor: "white",
+        borderRadius: "4px",
+        width: 300,
+        marginTop: "2%",
+      }}
+    >
+      <h3 style={{ textAlign: "center" }}>Timer: {formatTime(timer)}</h3>
+    </div>
+  );
 };
 
 export default Timer;
