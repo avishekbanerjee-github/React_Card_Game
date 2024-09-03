@@ -32,11 +32,14 @@ const Card = () => {
     }
   };
 
+  const gameEnd = () => {
+    alert("Congratuletions You Finish The Game");
+    navigate("/");
+  };
+
   return (
     <>
-      {showColor.length === cardCount
-        ? alert("Congratuletions You Finish The Game")
-        : null}
+      {showColor.length === cardCount ? gameEnd() : null}
       <div>
         <div className="card-container">
           {cardData.map((ele) => (
