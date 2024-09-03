@@ -1,3 +1,4 @@
+//All Cards data
 export const cardData = [
   { id: 1, item: "Card1" },
   { id: 2, item: "Card1" },

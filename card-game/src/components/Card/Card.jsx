@@ -7,9 +7,10 @@ const Card = () => {
   const [cardClicked, setCardClicked] = useState(null);
   const [btnClicked, setBtnClicked] = useState(null);
   const [showColor, setShowColor] = useState([]);
-  const cardCount = cardData.length / 2;
+  const cardCount = cardData.length / 2; // Variable For CardCount afetr divided
   const navigate = useNavigate();
 
+  //Click Card Method
   const CardClicked = (item) => {
     if (!cardClicked) {
       setCardClicked(item);
@@ -32,6 +33,7 @@ const Card = () => {
     }
   };
 
+  //After Game Finish Call This method
   const gameEnd = () => {
     alert("Congratuletions You Finish The Game");
     navigate("/");
